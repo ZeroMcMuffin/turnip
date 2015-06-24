@@ -1,6 +1,6 @@
 {
   "name": "turnip",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Turnip! Cross-platform CLI Pomodoro Timer",
   "keywords": ["pomodoro", "cross-platform"],
   "scripts": {
