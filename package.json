@@ -9,7 +9,7 @@
   "bin": {
     "turnip": "./bin/pomodoro.js"
   },
-  "author": "ZeroMcMuffin <allen.el@darksideproductions.net>",
+  "author": "ZeroMcMuffin <zeromcmuffin@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "beepbeep": "^1.2.0",
