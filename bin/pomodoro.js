@@ -7,23 +7,30 @@ var beep = require('beepbeep' ),
 
 var INTERVAL = 1000; // update once per second
 var DEFAULT_DURATION = 25;
+var DEFAULT_BREAK_DURATION = 5;
 
 program
   .version('Turnip ' + require('../package').version)
-  .option('-d, --duration <duration>', 'duration in minutes (default 25 minutes)')
-  .option('-t, --task <name>', 'task name')
+  .option('-d, --duration <duration>', 'duration in minutes')
+  .option('-t, --task <name>', 'task name (default: 25 minutes)')
+  .option('-b, --break', 'take a break (default: 5 minutes)')
   .parse(process.argv);
 
 // todo handle input errors, default to pomodoro and not help
 if (program.task) {
-    startPomodoro(program.task);
-} else {
-    program.help();
-}
-
-function startPomodoro(task) {
   var duration = (program.duration && program.duration > 0)
     ? program.duration : DEFAULT_DURATION;
+    startPomodoro(program.task, duration);
+} else if(program.break) {
+  var duration = (program.duration && program.duration > 0)
+    ? program.duration : DEFAULT_BREAK_DURATION;
+    startPomodoro('Break time!', duration);
+}
+else{
+  program.help();
+}
+
+function startPomodoro(task, duration) {
   var totalTime = duration * 60;
   var elapsedTime = 0;
   var label =  task + ' [:bar] Time left :token1';

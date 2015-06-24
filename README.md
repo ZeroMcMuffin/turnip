@@ -1,4 +1,4 @@
-# Turnip
+# ![alt tag](./turnip.png)  Turnip
 Cross-platform CLI based Pomodoro® client
 
 ## Installation
