@@ -1,15 +1,15 @@
-# pom-cli
-A CLI based Pomodoro® client
+# Turnip
+Cross-platform CLI based Pomodoro® client
 
 ## Installation
 ```
-npm install -g pom-cli
+npm install -g turnip
 ```
 
 ## Usage
 
 ```
-pomodoro -t <taskname> -d <duration-in-minutes>
+turnip -t <taskname> -d <duration-in-minutes>
 ```
 
 
