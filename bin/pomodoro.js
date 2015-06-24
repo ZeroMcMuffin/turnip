@@ -10,7 +10,7 @@ var DEFAULT_DURATION = 25;
 var DEFAULT_BREAK_DURATION = 5;
 
 program
-  .version('Turnip ' + require('../package').version)
+  .version('turnip ' + require('../package').version)
   .option('-d, --duration <duration>', 'duration in minutes')
   .option('-t, --task <name>', 'task name (default: 25 minutes)')
   .option('-b, --break', 'take a break (default: 5 minutes)')
