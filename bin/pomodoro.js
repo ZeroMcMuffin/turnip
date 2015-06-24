@@ -10,7 +10,7 @@ var DEFAULT_DURATION = 25;
 
 program
   .version(require('../package').version)
-  .option('-d, --duration <duration>', 'duration in minutes')
+  .option('-d, --duration <duration>', 'duration in minutes (default 25 minutes)')
   .option('-t, --task <name>', 'task name')
   .parse(process.argv);
 
