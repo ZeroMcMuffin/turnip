@@ -1,5 +1,5 @@
 {
-  "name": "pom-cli",
+  "name": "pom-cli  ",
   "version": "0.0.1",
   "description": "Free CLI Pomodoro Timer",
   "keywords": "pomodoro",
@@ -16,6 +16,5 @@
     "commander": "^2.8.1",
     "node-notifier": "^4.2.3",
     "progress": "^1.1.8"
-  },
-  "repository": "https://github.com/ZeroMcMuffin/pom-cli"
+  }
 }
