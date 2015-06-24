@@ -12,7 +12,7 @@ program
   .option('-t, --task <name>', 'task name')
   .parse(process.argv);
 
-
+// todo handle input errors
 if (program.task) {
     startPomodoro(program.task);
 } else {
@@ -20,7 +20,8 @@ if (program.task) {
 }
 
 function startPomodoro(task) {
-  var duration = program.duration | DEFAULT_DURATION;
+  var duration = (program.duration && program.duration > 0)
+    ? program.duration : DEFAULT_DURATION;
   var totalTime = duration * 60;
   var elapsedTime = 0;
   var label =  task + ' [:bar] Time left :token1';
