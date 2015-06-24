@@ -10,7 +10,7 @@
     "pomodoro": "./bin/pomodoro.js"
   },
   "author": "= <=> (=)",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "beepbeep": "^1.2.0",
     "commander": "^2.8.1",
