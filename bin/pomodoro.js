@@ -4,7 +4,7 @@ var program = require('commander' ),
     progressBar = require('progress' ),
     notifier = require('node-notifier');
 var INTERVAL = 1000; // update once per second
-var DEFAULT_DURATION = 1;
+var DEFAULT_DURATION = 25;
 
 program
   .version(require('../package').version)
@@ -46,8 +46,8 @@ function startPomodoro(task) {
 }
 
 function formatTime(seconds) {
-  var mins = seconds/60;
-  seconds = (seconds < 60) ? seconds : 60 % seconds;
+  var mins = Math.trunc(seconds/60);
+  seconds = (seconds < 60) ? seconds : seconds % 60;
   if(mins > 1) {
     return mins + ':' + seconds;
   } else {
