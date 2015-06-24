@@ -1,13 +1,13 @@
 {
-  "name": "pom-cli  ",
+  "name": "Turnip",
   "version": "0.0.1",
-  "description": "Free CLI Pomodoro Timer",
-  "keywords": "pomodoro",
+  "description": "Turnip! Cross-platform CLI Pomodoro Timer",
+  "keywords": ["pomodoro", "cross-platform"],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "pomodoro": "./bin/pomodoro.js"
+    "turnip": "./bin/pomodoro.js"
   },
   "author": "ZeroMcMuffin <allen.el@darksideproductions.net>",
   "license": "MIT",
