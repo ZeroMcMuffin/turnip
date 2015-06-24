@@ -9,7 +9,7 @@ var INTERVAL = 1000; // update once per second
 var DEFAULT_DURATION = 25;
 
 program
-  .version(require('../package').version)
+  .version('Turnip ' + require('../package').version)
   .option('-d, --duration <duration>', 'duration in minutes (default 25 minutes)')
   .option('-t, --task <name>', 'task name')
   .parse(process.argv);
