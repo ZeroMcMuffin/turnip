@@ -1,8 +1,10 @@
 #!/usr/bin/env node
 
-var program = require('commander' ),
-    progressBar = require('progress' ),
-    notifier = require('node-notifier');
+var beep = require('beepbeep' ),
+    notifier = require('node-notifier' ),
+    program = require('commander' ),
+    progressBar = require('progress' );
+
 var INTERVAL = 1000; // update once per second
 var DEFAULT_DURATION = 25;
 
@@ -12,7 +14,7 @@ program
   .option('-t, --task <name>', 'task name')
   .parse(process.argv);
 
-// todo handle input errors
+// todo handle input errors, default to pomodoro and not help
 if (program.task) {
     startPomodoro(program.task);
 } else {
@@ -36,6 +38,7 @@ function startPomodoro(task) {
       'token1': formatTime(totalTime - elapsedTime)
     });
     if (bar.complete) {
+      beep(2, 100); // todo: find better notification sound
       console.log('\nPomodoro for ' + task + ' completed\n');
       clearInterval(timer);
       notifier.notify({
@@ -49,8 +52,9 @@ function startPomodoro(task) {
 function formatTime(seconds) {
   var mins = Math.trunc(seconds/60);
   seconds = (seconds < 60) ? seconds : seconds % 60;
-  if(mins > 1) {
-    return mins + ':' + seconds;
+  var placeholder = (seconds > 9) ? '' : '0';
+  if(mins > 0.0) {
+    return mins + ':' + placeholder + seconds;
   } else {
     return seconds + 's';
   }

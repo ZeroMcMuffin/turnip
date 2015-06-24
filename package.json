@@ -12,6 +12,7 @@
   "author": "= <=> (=)",
   "license": "ISC",
   "dependencies": {
+    "beepbeep": "^1.2.0",
     "commander": "^2.8.1",
     "node-notifier": "^4.2.3",
     "progress": "^1.1.8"
