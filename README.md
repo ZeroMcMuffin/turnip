@@ -20,6 +20,7 @@ turnip -t <taskname> -d <duration-in-minutes>
 -V, --version              output the version number
 -d, --duration <duration>  duration in minutes (default 25 minutes)
 -t, --task <name>          task name --help
+-b, --break                take a break (default: 5 minutes)
 ```
 
 ## Notice
