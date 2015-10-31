@@ -2,7 +2,10 @@
   "name": "turnip",
   "version": "0.0.4",
   "description": "Turnip! Cross-platform CLI Pomodoro Timer",
-  "keywords": ["pomodoro", "cross-platform"],
+  "keywords": [
+    "pomodoro",
+    "cross-platform"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,6 +18,8 @@
     "beepbeep": "^1.2.0",
     "commander": "^2.8.1",
     "node-notifier": "^4.2.3",
-    "progress": "^1.1.8"
+    "play-sound": "0.0.7",
+    "progress": "^1.1.8",
+    "user-settings": "^0.1.5"
   }
 }
